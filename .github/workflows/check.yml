@@ -15,7 +15,7 @@ concurrency:
   group: gate-check
   cancel-in-progress: false
 
-jobs:
+jobs:check.helei.kdns.fr
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -35,7 +35,7 @@ jobs:
         run: python vpngate.py
         env:
           # 已部署的检测 Worker (不要改动: 检测统一走这里)
-          CHECK_WORKER: "https://check.helei.kdns.fr/check?sstp=vpn:vpn@"
+          CHECK_WORKER: "https://gate-check.sangekanshijie.workers.dev/check?sstp=vpn:vpn@"
           CHECK_CONCURRENCY: "32"
           CHECK_TIMEOUT: "90"
 
@@ -71,4 +71,4 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Show site URL
-        run: 'echo "site: https://jerylihub.github.io/gate/ (deploy outcome: ${{ steps.deployment.outcome }})"'
+        run: 'echo "site: https://jixiaoxin1986.github.io/gate/ (deploy outcome: ${{ steps.deployment.outcome }})"'
