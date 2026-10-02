@@ -15,7 +15,7 @@ concurrency:
   group: gate-check
   cancel-in-progress: false
 
-jobs:check.helei.kdns.fr
+jobs:
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 30
